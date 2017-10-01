@@ -1,0 +1,27 @@
+.container .panel{
+	margin-top: 20px !important;
+}
+
+.container .heading{
+	background-color: #dff0d8 !important;
+}
+
+.container .group_button{
+        margin-top: 20px;
+    }
+
+.form-horizontal{
+	padding: 20px !important;
+}
+
+.faces{
+    margin-top: 20px !important;
+}
+
+.center{
+    text-align: center !important;
+}
+
+.label_query{
+    font-size: 13px !important;
+}

@@ -1,0 +1,12 @@
+<table class="faces table table-bordered">
+    <tr>
+        <th>Имя сотрудника</th>
+        <th class="center">Количество детей</th>
+    </tr>
+    {% for member in kids %}
+        <tr>
+            <td>{{member.full_name}}</td>
+            <td class="center">{{member.count}}</td>
+        </tr>
+    {% endfor %}
+</table>

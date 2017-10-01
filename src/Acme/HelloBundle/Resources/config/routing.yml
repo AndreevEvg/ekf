@@ -1,0 +1,15 @@
+acme_hello_homepage:
+    path: /
+    defaults: { _controller: AcmeHelloBundle:Create:index }
+    
+create_faces:
+    path: /create_faces/
+    defaults: { _controller: AcmeHelloBundle:Create:createRecordFaces }
+
+create_kids:
+    path: /create_kids/
+    defaults: { _controller: AcmeHelloBundle:Create:createRecordKids }
+    
+reports:
+    path: /reports/
+    defaults: { _controller: AcmeHelloBundle:Reports:reports }

@@ -1,0 +1,62 @@
+{% extends "AcmeHelloBundle::layout.html.twig" %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-body form_body">
+            <h2>Дети сотрудников</h2>
+            <form class="form-horizontal" action="{{ path('create_kids') }}" method="post" {{ form_enctype(form) }}>
+                
+                {{ form_errors(form) }}
+                
+                <div class="form-group">
+                    {{ form_label(form.fullName, 'Полное имя: Фамилия + Имя + Отчество') }}
+                    {{ form_errors(form.fullName) }}
+                    {{ form_widget(form.fullName, {'attr': {'class': 'form-control'} }) }}          
+                </div>
+                
+                <div class="form-group">
+                    {{ form_label(form.soname, 'Фамилия') }}
+                    {{ form_errors(form.soname) }}
+                    {{ form_widget(form.soname, {'attr': {'class': 'form-control'} }) }}          
+                </div>
+                
+                <div class="form-group">
+                    {{ form_label(form.name, 'Имя') }}
+                    {{ form_errors(form.name) }}
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control'} }) }}          
+                </div>
+                
+                <div class="form-group">
+                    {{ form_label(form.fathersName, 'Отчество') }}
+                    {{ form_errors(form.fathersName) }}
+                    {{ form_widget(form.fathersName, {'attr': {'class': 'form-control'} }) }}          
+                </div>
+                
+                <div class="form-group">
+                    {{ form_label(form.birthDate, 'Дата рождения') }}
+                    {{ form_errors(form.birthDate) }}
+                    {{ form_widget(form.birthDate, {'attr': {'class': 'form-control'} }) }}          
+                </div>
+                
+                <div class="form-group">
+                    {{ form_label(form.gender, 'Пол: 1 - мужской, 2 - женский') }}
+                    {{ form_errors(form.gender) }}
+                    {{ form_widget(form.gender, {'attr': {'class': 'form-control'} }) }}          
+                </div>
+                
+                <div class="form-group">
+                    {{ form_label(form.faces, 'Родитель ребенка') }}
+                    {{ form_errors(form.faces) }}
+                    {{ form_widget(form.faces, {'attr': {'class': 'form-control'} }) }}          
+                </div>
+                
+                {{ form_rest(form) }}
+                
+                <div class="form-group group_button">
+                    <input class="btn btn-primary" type="submit" value="Добавить">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+{% endblock %}

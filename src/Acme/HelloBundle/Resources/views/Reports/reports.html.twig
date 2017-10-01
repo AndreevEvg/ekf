@@ -1,0 +1,16 @@
+{% extends "AcmeHelloBundle::layout.html.twig" %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-body form_body">
+            <blockquote>
+            <h2>Отчеты</h2>
+            </blockquote>
+            <span class="label_query label label-info">Полное имя и возраст сотрудников старше 20 лет</span>
+            {% include 'AcmeHelloBundle:Reports:reportsFaces.html.twig' with {'faces': faces} %}
+            
+            <span class="label_query label label-info">Список сотрудников и количество их детей младше 7 лет</span>
+            {% include 'AcmeHelloBundle:Reports:reportsKids.html.twig' with {'kids': kids} %}
+        </div>
+    </div>
+{% endblock %}
